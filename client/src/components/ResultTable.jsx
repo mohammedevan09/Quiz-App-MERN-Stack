@@ -5,8 +5,8 @@ const ResultTable = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    getServerData(`http://localhost:8000/api/results`, (res) => setData(res))
-  })
+    getServerData(import.meta.env.VITE_RESULT_URL, (res) => setData(res))
+  }, [])
 
   return (
     <div>

@@ -27,7 +27,7 @@ export const usePublishResult = (resultData) => {
     try {
       if (result !== [] && !username) throw new Error("Couldn't get Result")
       await postServerData(
-        `http://localhost:8000/api/results`,
+        import.meta.env.VITE_RESULT_URL,
         resultData,
         (data) => data
       )

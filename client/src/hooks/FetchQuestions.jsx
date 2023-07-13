@@ -23,7 +23,7 @@ export const useFetchQuestion = () => {
     ;(async () => {
       try {
         const [{ question, answers }] = await getServerData(
-          'http://localhost:8000/api/questions',
+          import.meta.env.VITE_QUESTION_URL,
           (data) => data
         )
 
