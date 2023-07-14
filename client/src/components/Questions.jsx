@@ -28,7 +28,7 @@ const Questions = ({ onChecked }) => {
     dispatch(updateResult({ trace, checked }))
   }
 
-  if (isLoading) return <h3 className="text-light">It is loading</h3>
+  if (isLoading) return <h3 className="text-light">Loading...</h3>
   if (serverError)
     return <h3 className="text-light">{serverError || 'Unknown Error'}</h3>
 
